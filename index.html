@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf Apps</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet" />
+
+    <!-- style -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="title">Bookshelf Apps</h1>
+    
+    <div class="content">
+      <!-- form section -->
+        <div class="section">
+            <h3 id="form-book-title">Masukkan Buku Baru</h3>
+
+            <form id="form-book">
+                <input id="input-id" class="input" type="hidden" name="id">
+                <div class="form-group">
+                    <label for="input-title">Judul <span class="text-danger">*</span></label>
+                    <input id="input-title" class="input" type="text" name="title" placeholder="Masukkan Judul Buku" required>
+                </div>
+                <div class="form-group">
+                    <label for="input-author">Penulis <span class="text-danger">*</span></label>
+                    <input id="input-author" class="input" type="text" name="author" placeholder="Masukkan Nama Penulis Buku" required>
+                </div>
+                <div class="form-group">
+                    <label for="input-year">Tahun <span class="text-danger">*</span></label>
+                    <input id="input-year" class="input" type="text" name="year" placeholder="Masukkan Tahun Perilisan Buku" oninput="this.value = this.value.replace(/[^0-9]/g, '');" required>
+                </div>
+                <div class="form-group">
+                    <label for="input-complete">Selesai Dibaca</label>
+                    <input id="input-complete" type="checkbox" name="isComplete">
+                </div>
+                <button class="btn" type="submit">Masukan Buku ke Rak <b id="btn-save-book">Belum Selesai dibaca</b></button>
+            </form>
+        </div>
+
+        <!-- search section -->
+        <div class="section">
+            <h3>Cari Buku</h3>
+
+            <form id="form-search">
+                <div class="form-group">
+                    <label for="input-title">Judul</label>
+                    <input id="input-title" class="input" type="text" name="search" placeholder="Masukkan Judul Buku">
+                </div>
+                <div class="btn-wrapper">
+                  <button class="btn small" type="submit">Cari</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- unfinish book section -->
+        <div id="unfinished-books" class="section">
+            <h3>Belum Selesai Dibaca</h3>
+            <div class="list"></div>
+        </div>
+
+        <!-- finished book section -->
+        <div id="finished-books" class="section">
+            <h3>Selesai Dibaca</h3>
+            <div class="list"></div>
+        </div>
+    </div>
+
+    <!-- dialog container -->
+    <div id="dialog-container"></div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

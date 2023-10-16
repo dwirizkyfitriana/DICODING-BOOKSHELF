@@ -1,0 +1,177 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  text-align: center;
+  font-weight: 700;
+  background: #00923f;
+  margin: 0;
+  padding: 10px 0;
+  color: #fff;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section h3 {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-weight: 700;
+}
+
+.text-danger {
+  color: #dc3545;
+}
+
+.section {
+  display: flex;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  flex-direction: column;
+  max-height: 580px;
+  overflow-y: auto;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group .input {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  margin-top: 3px;
+  font-size: 1rem;
+  font-weight: 400;
+  border: 1px solid black;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+}
+
+.btn {
+  background-color: #00923f;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  font-size: medium;
+}
+
+.btn.small {
+  width: 30% !important;
+  margin: auto;
+}
+
+.btn.fit {
+  width: fit-content !important;
+}
+
+.btn-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.bg-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.bg-primary {
+  background-color: #00923f;
+  color: white;
+}
+
+.bg-secondary {
+  background-color: #5d5d5d;
+  color: white;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 4px 4px 1px #00000020, 0 1px 3px #0003;
+  padding: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.card .card-title {
+  font-weight: 700;
+  font-size: large;
+}
+
+button {
+  cursor: pointer;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.card-footer button {
+  margin: 0 !important;
+  width: fit-content !important;
+}
+
+.dialog-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.dialog-overlay .dialog {
+  width: 400px;
+  margin: 300px auto 0;
+  box-shadow: 4px 4px 1px #00000020, 0 1px 3px #0003;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #fff;
+  padding: 8px;
+}
+
+.dialog-overlay .dialog-title {
+  font-weight: 700;
+  font-size: large;
+  padding: 10px 8px;
+}
+
+.dialog-overlay .dialog-body {
+  padding: 10px 8px;
+}
+
+
+.dialog-overlay .dialog-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.dialog-overlay .dialog-footer button {
+  margin: 0 !important;
+  width: 20% !important;
+}
